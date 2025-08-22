@@ -1,7 +1,5 @@
-from CerosDeFunciones.Biseccion.biseccion import biseccion
-from CerosDeFunciones.PosicionFalsa.posicion_falsa import posicion_falsa
-
-import numpy as np
+from CerosDeFunciones.MetodosCerrados.Biseccion.biseccion import biseccion
+from CerosDeFunciones.MetodosCerrados.PosicionFalsa.posicion_falsa import posicion_falsa
 
 tolerancia = 1e-8
 
