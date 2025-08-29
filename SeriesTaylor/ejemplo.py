@@ -34,6 +34,7 @@ for i in [1, 5]:
 Data = pd.DataFrame(values, columns=['x', 'P(x)', 'f(x)', '|P(x)-f(x)|', 'E_R'])
 print(Data)
 print("---------")
+
 # Graficamos La función y el polinomio
 
 F = sp.log(x**2+1)
