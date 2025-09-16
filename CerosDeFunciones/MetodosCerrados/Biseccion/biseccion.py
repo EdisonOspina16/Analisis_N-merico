@@ -1,6 +1,3 @@
-import sympy as sp
-
-
 def biseccion(funcion,a, b, tolerancia):
 
     if funcion(a) * funcion(b) > 0:
