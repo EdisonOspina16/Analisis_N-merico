@@ -24,8 +24,9 @@ print(U)
 print("Matriz transpuesta")
 AT = np.transpose(A)
 print(AT)
+
 # producto punto
 print(np.dot(AT, DIAGONAL))
 
 # determinante
-np.linalg.det()
+np.linalg.det(A)

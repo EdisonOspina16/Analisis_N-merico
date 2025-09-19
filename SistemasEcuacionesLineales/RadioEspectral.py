@@ -16,4 +16,3 @@ print(f" Los valores propios de la matriz B son. {valores_propios}")
 # radio
 radio = max(abs(valores_propios))
 print(f" El radio espectral de la matriz A es {radio}")
-
