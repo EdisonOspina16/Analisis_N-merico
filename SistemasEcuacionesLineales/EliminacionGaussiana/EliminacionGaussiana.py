@@ -9,6 +9,7 @@ def eliminacion_gaussiana(A, b):
     Eliminación gaussiana sin pivoteo para matrices DD o EDD.
     Retorna la matriz aumentada [A|b] en forma triangular superior.
     """
+
     A = A.astype(float)  # asegurar tipo float
     b = b.astype(float)
     n = len(b)
@@ -20,17 +21,9 @@ def eliminacion_gaussiana(A, b):
             A[j] = A[j] - factor_lambda * A[i]
             b[j] = b[j] - factor_lambda * b[i]
 
-    # Concatenar A y b como matriz aumentada
-    Ab = np.concatenate((A, b.reshape(-1, 1)), axis=1)
-    return Ab
+    x_solucion = np.zeros_like(b)
 
+    for k in range(n - 1, -1, -1):
+        x_solucion[k] = (b[k] - np.dot(A[k, k + 1:n], x_solucion[k + 1:n])) / A[k, k]
 
-# Ejemplo de uso
-A = np.array([[-3, 2, 1],
-              [ 6,-8,-2],
-              [ 1,-1,-2]], float)
-
-b = np.array([2, 1, 3], float)
-
-Ab_resultado = eliminacion_gaussiana(A, b)
-print(Ab_resultado)
+    return x_solucion
