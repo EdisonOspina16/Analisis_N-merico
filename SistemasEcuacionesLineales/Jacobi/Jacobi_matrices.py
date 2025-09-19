@@ -2,7 +2,7 @@ import numpy as np
 
 def jacobi_matrices(A, b, x0, tol=1e-6):
 
-    D = np.diag(np.diag(A))
+    D = np.diag(np.diag(A)) # diagonal
     U = D-np.triu(A)
     L = D-np.tril(A)
 
@@ -27,16 +27,3 @@ def jacobi_matrices(A, b, x0, tol=1e-6):
     else:
         print("No converge :(")
         return None
-
-
-
-A = np.array([[10, -1, 2],
-              [-1, 11, -1],
-              [2, -1, 10]], float)
-
-b = np.array([6, 25, -11], float)
-x0 = np.array([0, 0, 0])
-
-
-solucion , iter = jacobi_matrices(A, b, x0)
-print(f'La solución es: {solucion}, {iter} iteraciones')

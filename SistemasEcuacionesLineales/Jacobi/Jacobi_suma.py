@@ -1,7 +1,7 @@
 import numpy as np
 
+def jacobi_seidel_suma(A, b, x0, tolerancia=1e-6, max_iter=100):
 
-def jacobi_suma(A, b, tolerancia, max_iter=100):
     x0 = np.zeros_like(b, dtype=float)  # Aproximación inicial
     x_new = np.zeros_like(b, dtype=float)
     error = 1
@@ -24,7 +24,7 @@ def jacobi_suma(A, b, tolerancia, max_iter=100):
         x0 = x_new.copy()
         iteraciones += 1
 
-    return x_new
+    return x_new, iteraciones
 
 
 # Ejemplo
@@ -34,6 +34,7 @@ A = np.array([[3, -1, 0],
 
 b = np.array([2, 3, 5], float)
 
+x0 = np.array([0,0,0])
 
-solucion = jacobi_suma(A, b, 1e-2)
-print("\nSolución aproximada:", solucion)
+sol, iter = jacobi_seidel_suma(A, b, x0)
+print(f"Solución aproximada es: {sol}, iteraciones: {iter}")
