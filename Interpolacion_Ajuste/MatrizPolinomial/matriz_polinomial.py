@@ -12,4 +12,3 @@ def matriz_polinomial(x_data):
         for j in range(1, n):
             M[i,j] = M[i, j-1]*x_data[i]
     return M
-

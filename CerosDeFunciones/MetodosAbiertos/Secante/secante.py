@@ -1,4 +1,4 @@
-def secante(funcion, x0, x1, tolerancia, n_max=100):
+def secante(funcion, x0, x1, tolerancia=1e-8, n_max=100):
     iteracion = 0
     while iteracion < n_max:
         if funcion(x1) - funcion(x0) == 0:

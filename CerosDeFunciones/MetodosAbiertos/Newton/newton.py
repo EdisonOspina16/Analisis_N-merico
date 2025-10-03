@@ -1,6 +1,6 @@
 import sympy as sp
 
-def newton(funcion, X0, tolerancia):
+def newton(funcion, X0, tolerancia=1e-8):
     x = sp.symbols('x')
     df = sp.diff(funcion, x)  # Derivada simbólica
 
