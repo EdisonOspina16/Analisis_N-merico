@@ -13,3 +13,4 @@ def lagrange(x_d, y_d):
                 li *= (x - x_d[j]) / (x_d[i] - x_d[j])
         P += li * y_d[i]
     return sp.expand(P)
+
