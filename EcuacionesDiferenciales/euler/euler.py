@@ -6,6 +6,11 @@ def euler(funcion, a, b, h, condicion_inicial):
     :parametro a: límite inferior
     :parametro b: límite superior
     :parametro h: paso
+
+    #Prueba rápida / exploración -> h = 0.1 o 0.5 -> Menos preciso, pero rápido
+    #Quieres buena precisión	-> h = 0.01 o 0.001 ->	Más puntos, más lento
+    #Ecuaciones suaves y simples -> h = 0.2 o 0.25	-> Suficiente en muchos casos
+
     :parametro condición_inicial: vector de condiciones iniciales [x0, y0]
     :retorna: arrays t y w (solución)
     """
